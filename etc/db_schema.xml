@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="mageworx_greendelivery_option_quote" resource="default" engine="innodb" comment="Green Delivery Option flag for Quote">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="int" name="quote_id" unsigned="true" nullable="false" comment="Quote ID"/>
+        <column xsi:type="boolean" name="value" nullable="false" default="false" comment="Value"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="MAGEWORX_GREENDELIVERY_OPTION_QUOTE_QUOTE_ID_QUOTE_ENTITY_ID" table="mageworx_greendelivery_option_quote" column="quote_id" referenceTable="quote" referenceColumn="entity_id" onDelete="CASCADE"/>
+        <constraint xsi:type="unique" referenceId="MAGEWORX_GREENDELIVERY_OPTION_QUOTE_QUOTE_ID">
+            <column name="quote_id"/>
+        </constraint>
+    </table>
+    <table name="mageworx_greendelivery_option_order" resource="default" engine="innodb" comment="Green Delivery Option flag for Order">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="int" name="order_id" unsigned="true" nullable="false" comment="Order ID"/>
+        <column xsi:type="boolean" name="value" nullable="false" default="false" comment="Value"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="MAGEWORX_GREENDELIVERY_OPT_ORDER_ORDER_ID_SALES_ORDER_ENTT_ID" table="mageworx_greendelivery_option_order" column="order_id" referenceTable="sales_order" referenceColumn="entity_id" onDelete="CASCADE"/>
+        <constraint xsi:type="unique" referenceId="MAGEWORX_GREENDELIVERY_OPTION_ORDER_ORDER_ID">
+            <column name="order_id"/>
+        </constraint>
+    </table>
+</schema>

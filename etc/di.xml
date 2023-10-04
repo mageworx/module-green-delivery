@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="MageWorx\GreenDeliveryBase\Api\Data\QuoteGreenDeliveryOptionFlagInterface" type="MageWorx\GreenDeliveryBase\Model\QuoteGreenDeliveryOptionFlag"/>
+    <preference for="MageWorx\GreenDeliveryBase\Api\QuoteGreenDeliveryOptionFlagRepositoryInterface" type="MageWorx\GreenDeliveryBase\Model\QuoteGreenDeliveryOptionFlagRepository"/>
+    <preference for="MageWorx\GreenDeliveryBase\Api\Data\OrderGreenDeliveryOptionFlagInterface" type="MageWorx\GreenDeliveryBase\Model\OrderGreenDeliveryOptionFlag"/>
+    <preference for="MageWorx\GreenDeliveryBase\Api\OrderGreenDeliveryOptionFlagRepositoryInterface" type="MageWorx\GreenDeliveryBase\Model\OrderGreenDeliveryOptionFlagRepository"/>
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="add_mageworx_green_delivery_option_attribute" type="MageWorx\GreenDeliveryBase\Plugin\Api\Order\AddGreenDeliveryOptionAttributePlugin"/>
+        <plugin name="save_mageworx_green_delivery_option_attribute" type="MageWorx\GreenDeliveryBase\Plugin\Api\Order\SaveGreenDeliveryOptionAttributePlugin"/>
+        <plugin name="mageworx_greendelivery_change_shipping_description" type="MageWorx\GreenDeliveryBase\Plugin\Api\Order\ChangeShippingDescriptionPlugin"/>
+    </type>
+    <type name="Magento\Quote\Api\CartRepositoryInterface">
+        <plugin name="add_mageworx_green_delivery_option_attribute" type="MageWorx\GreenDeliveryBase\Plugin\Api\Quote\AddGreenDeliveryOptionAttributePlugin"/>
+        <plugin name="save_mageworx_green_delivery_option_attribute" type="MageWorx\GreenDeliveryBase\Plugin\Api\Quote\SaveGreenDeliveryOptionAttributePlugin"/>
+    </type>
+    <type name="\Magento\Quote\Api\CartManagementInterface">
+        <plugin name="add_mageworx_green_delivery_option_to_new_order" type="MageWorx\GreenDeliveryBase\Plugin\Api\AddGreenDeliveryOptionToNewOrder"/>
+    </type>
+
+    <type name="\Magento\Quote\Model\Quote\Address\Total\Shipping">
+        <plugin name="add_mageworx_green_delivery_option_data" type="MageWorx\GreenDeliveryBase\Plugin\AddGreenDeliveryOptionDataToShippingPlugin"/>
+    </type>
+</config>

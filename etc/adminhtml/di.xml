@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <plugin name="add_mageworx_green_delivery_option_flag_to_orders_grid" type="MageWorx\GreenDeliveryBase\Plugin\Order\Grid\AddGreenDeliveryOptionFlagPlugin"/>
+    </type>
+</config>

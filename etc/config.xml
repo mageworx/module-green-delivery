@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mageworx_greendelivery>
+            <option>
+                <enable>0</enable>
+                <title>Green delivery</title>
+            </option>
+        </mageworx_greendelivery>
+        <carriers>
+            <mageworxgreendelivery>
+                <active>0</active>
+                <title>Green Delivery</title>
+                <name>Green Delivery</name>
+                <cost>0.00</cost>
+                <sallowspecific>0</sallowspecific>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+                <sort_order>0</sort_order>
+                <model>MageWorx\GreenDeliveryBase\Model\Carrier\GreenDelivery</model>
+            </mageworxgreendelivery>
+        </carriers>
+    </default>
+</config>

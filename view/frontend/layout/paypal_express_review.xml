@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="MageWorx_GreenDeliveryBase::css/styles.css"/>
+        <css src="MageWorx_GreenDeliveryBase::css/paypal-styles.css"/>
+    </head>
+    <body>
+        <referenceBlock name="content">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="mageworx.green_delivery_option.js_config"
+                   as="green_delivery_option_js_config"
+                   ifconfig="mageworx_greendelivery/option/enable"
+                   template="MageWorx_GreenDeliveryBase::option_js_config.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">MageWorx\GreenDeliveryBase\ViewModel\OptionJsConfig</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="paypal.additional.actions">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="mageworx.green_delivery.description"
+                   as="green_delivery_description"
+                   template="MageWorx_GreenDeliveryBase::paypal/express/green_delivery_description.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">MageWorx\GreenDeliveryBase\ViewModel\PayPal\GreenDeliveryDescription</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template"
+                   name="mageworx.green_delivery_option"
+                   after="-"
+                   cacheable="false"
+                   ifconfig="mageworx_greendelivery/option/enable"
+                   template="MageWorx_GreenDeliveryBase::paypal/express/green_delivery_option.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="mageworx-green-delivery-option" xsi:type="array">
+                                <item name="component" xsi:type="string">MageWorx_GreenDeliveryBase/js/view/paypal/green-delivery-option</item>
+                                <item name="template" xsi:type="string">MageWorx_GreenDeliveryBase/form/green-delivery-option</item>
+                                <item name="provider" xsi:type="string">checkoutProvider</item>
+                                <item name="dataScope" xsi:type="string">checkout.green_delivery_option</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="customScope" xsi:type="string">checkout</item>
+                                    <item name="prefer" xsi:type="string">toggle</item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="MageWorx_GreenDeliveryBase::css/styles.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="mageworx.green_delivery_method.js_config"
+                   as="green_delivery_method_js_config"
+                   template="MageWorx_GreenDeliveryBase::method_js_config.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">MageWorx\GreenDeliveryBase\ViewModel\MethodJsConfig</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template"
+                   name="mageworx.green_delivery_option.js_config"
+                   as="green_delivery_option_js_config"
+                   template="MageWorx_GreenDeliveryBase::option_js_config.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">MageWorx\GreenDeliveryBase\ViewModel\OptionJsConfig</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="shippingAddress" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="shippingAdditional" xsi:type="array">
+                                                            <item name="component" xsi:type="string">uiComponent</item>
+                                                            <item name="displayArea" xsi:type="string">shippingAdditional</item>
+                                                            <item name="children" xsi:type="array">
+
+                                                                <item name="mageworx-green-delivery-method" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">MageWorx_GreenDeliveryBase/js/view/green-delivery-method</item>
+                                                                    <item name="displayArea" xsi:type="string">shipping-information</item>
+                                                                    <item name="template" xsi:type="string">MageWorx_GreenDeliveryBase/form/green-delivery-method</item>
+                                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                    <item name="dataScope" xsi:type="string">checkout.green_delivery_method</item>
+                                                                    <item name="config" xsi:type="array">
+                                                                        <item name="customScope" xsi:type="string">checkout</item>
+                                                                    </item>
+                                                                </item>
+
+                                                                <item name="mageworx-green-delivery-option" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">MageWorx_GreenDeliveryBase/js/view/green-delivery-option</item>
+                                                                    <item name="displayArea" xsi:type="string">shipping-information</item>
+                                                                    <item name="template" xsi:type="string">MageWorx_GreenDeliveryBase/form/green-delivery-option</item>
+                                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                    <item name="dataScope" xsi:type="string">checkout.green_delivery_option</item>
+                                                                    <item name="sortOrder" xsi:type="string">0</item>
+                                                                    <item name="config" xsi:type="array">
+                                                                        <item name="customScope" xsi:type="string">checkout</item>
+                                                                        <item name="prefer" xsi:type="string">toggle</item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

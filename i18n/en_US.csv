@@ -1,0 +1,26 @@
+"Invalid value type","Invalid value type"
+"Could not save the Green Delivery Option Flag: %1","Could not save the Green Delivery Option Flag: %1"
+"Could not add attribute to order: ""%1""","Could not add attribute to order: ""%1"""
+"Could not add attribute to cart: ""%1""","Could not add attribute to cart: ""%1"""
+Free,Free
+"Green Delivery (by MageWorx)","Green Delivery (by MageWorx)"
+"Green Delivery","Green Delivery"
+"Green Delivery Option","Green Delivery Option"
+Enable,Enable
+Title,Title
+Description,Description
+"Apply to shipping methods","Apply to shipping methods"
+Cost,Cost
+"Mageworx Green Delivery","Mageworx Green Delivery"
+Enabled,Enabled
+"Method Name","Method Name"
+Icon,Icon
+"Allowed file types: PNG, GIF, JPG, JPEG","Allowed file types: PNG, GIF, JPG, JPEG"
+"Font color","Font color"
+"Calculate Handling Fee","Calculate Handling Fee"
+"Handling Fee","Handling Fee"
+"Ship to Applicable Countries","Ship to Applicable Countries"
+"Ship to Specific Countries","Ship to Specific Countries"
+"Show Method if Not Applicable","Show Method if Not Applicable"
+"Displayed Error Message","Displayed Error Message"
+"Sort Order","Sort Order"

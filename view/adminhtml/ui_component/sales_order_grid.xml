@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <column name="green_delivery_option_flag" component="Magento_Ui/js/grid/columns/select" sortOrder="100">
+            <settings>
+                <options class="Magento\Config\Model\Config\Source\Yesno"/>
+                <filter>select</filter>
+                <dataType>select</dataType>
+                <visible>false</visible>
+                <label translate="true">Green Delivery Option</label>
+            </settings>
+        </column>
+    </columns>
+</listing>

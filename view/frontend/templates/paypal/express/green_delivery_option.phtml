@@ -1,0 +1,25 @@
+<?php
+
+?>
+<?php /**@var \Magento\Framework\View\Element\Template $block */ ?>
+<div id="block-green-delivery-option" style="display: none"
+     class="block green-delivery-option-container"
+     data-bind="scope:'mageworx-green-delivery-option'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#block-green-delivery-option": {
+                "Magento_Ui/js/core/app": <?= $block->getJsLayout(); ?>
+            }
+        }
+    </script>
+</div>
+<script>
+    require(['jquery'], function ($) {
+        if ($('#shipping-method-form').length) {
+            $('#shipping-method-form').append($('#block-green-delivery-option'));
+            $('#block-green-delivery-option').show();
+        }
+    });
+</script>
+

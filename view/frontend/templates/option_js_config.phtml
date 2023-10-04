@@ -1,0 +1,11 @@
+<?php
+
+?>
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \MageWorx\GreenDeliveryBase\ViewModel\OptionJsConfig $viewModel */
+$viewModel = $block->getViewModel();
+?>
+<script>
+    let mwGreenDeliveryOptionConfig = <?= /* @noEscape */ json_encode($viewModel->getConfig()); ?>;
+</script>
