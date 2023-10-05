@@ -1,7 +1,7 @@
 
 ![banner_green_delivery_2](https://github.com/mageworx/module-green-delivery/assets/97167025/d0937b21-c734-4dbe-b5f0-e24d4c3c858d)
 
-# MageWorx GreenDelivery Magento2 extension
+# Mageworx GreenDelivery Magento2 extension
 
 [Green Delivery](https://www.mageworx.com/green-delivery-magento-2.html) extension for Magento 2 offers an eco-conscious
 approach to shipping. It enables users to seamlessly integrate an additional delivery option, complete with visual
