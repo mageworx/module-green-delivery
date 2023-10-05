@@ -20,12 +20,11 @@ select environmentally responsible shipping options with the help of this module
 ## Compatibility
 
 - PHP:
-  - 7.4.x
   - 8.1.x
   - 8.2.x
-- Magento CE: 
+- Magento Open Source (Magento Community): 
   - 2.4.x
-- Magento EE:
+- Adobe Commerce/Commerce on Cloud (Magento Commerce):
   - 2.4.x
 
 ## Screenshots
