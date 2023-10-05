@@ -17,7 +17,7 @@ select environmentally responsible shipping options with the help of this module
 - Download this module and upload it to the `app/code/MageWorx/GreenDeliveryBase` directory *(create "GreenDeliveryBase" first if missing)*
 
 
-## Compability
+## Compatibility
 
 - PHP:
   - 7.4.x
