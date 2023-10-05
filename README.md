@@ -27,3 +27,14 @@ select environmentally responsible shipping options with the help of this module
   - 2.4.x
 - Magento EE:
   - 2.4.x
+
+## Screenshots
+
+<details>
+<summary>Expand</summary>
+![green_delivery_1_shipping_methods_1-min](https://github.com/mageworx/module-green-delivery/assets/97167025/639efcbf-53de-475f-aa2b-71c6fb2a345c)
+![green_delivery_2_shipping_methods_2-min](https://github.com/mageworx/module-green-delivery/assets/97167025/bc53b060-f082-4e26-bf6d-eb9ea15c2256)
+![green_delivery_3_orders-min](https://github.com/mageworx/module-green-delivery/assets/97167025/eb5bc9ae-ebe7-4f2c-aa50-13bd66ea8561)
+![green_delivery_4_option-min](https://github.com/mageworx/module-green-delivery/assets/97167025/ea48e15d-db21-40a3-9896-62c6749b23fd)
+![green_delivery_5_sales-min](https://github.com/mageworx/module-green-delivery/assets/97167025/09cc8dd4-db5a-4e41-b8a8-67832c72d587)
+</details>
